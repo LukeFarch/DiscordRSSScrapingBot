@@ -3,3 +3,4 @@ This bot serves the MSU Study Room server. It scrapes the RSS feed of the bleepi
 
 # AWS
 It uses Event Bridge to trigger every 24 hours with an empty json payload {}
+Communicating through an API gateway that AWS provides. 
