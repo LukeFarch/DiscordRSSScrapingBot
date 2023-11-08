@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1472.0",
+    "axios": "^1.5.1",
+    "crypto": "^1.0.1",
+    "discord.js": "^14.13.0",
+    "feedparser-promised": "2.0.1",
+    "spotify-web-api-node": "^5.0.2",
+    "tweetnacl": "^1.0.3"
+  }
+}
