@@ -7,7 +7,7 @@ const nacl = require('tweetnacl'); // Required for Discord verification
 AWS.config.update({ region: 'us-east-2' }); // Update the region if necessary
 const s3 = new AWS.S3();
 
-// Your Discord application's public key and bot token
+// Your Discord application's public key and bot token. This is setup in AWS but change it for yours
 const PUBLIC_KEY = process.env.PUBLIC_KEY; // Ensure this is set in your environment variables
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN; // Ensure this is set in your environment variables
 
@@ -28,7 +28,7 @@ async function handleEventBridgeTrigger() {
     // Fetch posted articles from S3 bucket
     try {
         const data = await s3.getObject({
-            Bucket: 'song-output', // Replace with your S3 bucket name
+            Bucket: 'song-output', // Replace with your S3 bucket name if youre using AWS like me
             Key: 'postedarticles.txt'
         }).promise();
 
@@ -107,7 +107,7 @@ exports.handler = async function (event, context) {
             body: JSON.stringify('unhandled request type')
         };
     } else {
-        // No headers present, assume it's an EventBridge trigger
+        // No headers present, assume it's an EventBridge trigger (AWS)
         await handleEventBridgeTrigger();
         return {
             statusCode: 200,
