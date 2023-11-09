@@ -7,8 +7,10 @@ Communicating through an API gateway that AWS provides. Using a one-bucket solut
 
 
 # THINGS TO CHANGE 
-You will need to change the channel ID and bucket names for your implementation. Please upload this code to Lambda to test or locally with POSTMAN. Ensure the environmental variables are properly set as well.
+You will need to change the channel ID and bucket names for your implementation. Please upload this code to Lambda to test or locally with POSTMAN. Ensure the environmental variables are correctly set as well.
 
-"https://discord.com/api/v10/channels/XXXXXXXXXXXXXXXX/messages" ~ change this to your channel ID
-"const PUBLIC_KEY = process.env.PUBLIC_KEY;" ~ get your public key from discord and set it in AWS  Lambda
-"const DISCORD_TOKEN = process.env.DISCORD_TOKEN;" ~ get your private key and set it in AWS Lambda
+  1. "https://discord.com/api/v10/channels/XXXXXXXXXXXXXXXX/messages"~~~~Change this to your channel ID!
+
+  2. "const PUBLIC_KEY = process.env.PUBLIC_KEY;"~~~~Get your public key from discord and set it in AWS  Lambda
+
+  3. "const DISCORD_TOKEN = process.env.DISCORD_TOKEN;"~~~~Get your private key and set it in AWS Lambda
