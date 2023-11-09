@@ -46,7 +46,7 @@ async function handleEventBridgeTrigger() {
 
             // Post new article to Discord
             try {
-                await axios.post(`https://discord.com/api/v10/channels/1158926484707213395/messages`, {
+                await axios.post(`https://discord.com/api/v10/channels/1158926484707213395/messages`, { // replace with your channel ID
                     content: `New Article: ${entry.title}\nLink: ${entry.link}`
                 }, {
                     headers: {
