@@ -6,7 +6,7 @@ It uses Event Bridge to trigger every 24 hours with an empty json payload {}
 Communicating through an API gateway that AWS provides. Using a one-bucket solution, it reads before posting to ensure no duplicate articles are posted. 
 
 
-# THINGS TO CHANGE 
+# SETUP
 You will need to change the channel ID and bucket names for your implementation. Please upload this code to Lambda to test or locally with POSTMAN. Ensure the environmental variables are correctly set as well.
 
   1. "https://discord.com/api/v10/channels/XXXXXXXXXXXXXXXX/messages" ~~~~Change this to your channel ID!
@@ -14,3 +14,7 @@ You will need to change the channel ID and bucket names for your implementation.
   2. "const PUBLIC_KEY = process.env.PUBLIC_KEY;" ~~~~Get your public key from Discord and set it in AWS  Lambda
 
   3. "const DISCORD_TOKEN = process.env.DISCORD_TOKEN;" ~~~~Get your private key and set it in AWS Lambda
+
+  4. git clone the repo, if you run locally you will need to change the AWS stuff and store those variables locally 
+
+
