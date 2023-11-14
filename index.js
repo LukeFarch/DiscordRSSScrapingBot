@@ -13,7 +13,7 @@ const DISCORD_TOKEN = process.env.DISCORD_TOKEN; // Ensure this is set in your e
 
 // Function to verify Discord request using tweetnacl
 async function verifyDiscordRequest(body, signature, timestamp) {
-    // Verifying Discord signature
+    // Verifying Discord signature, required or you will get an interactions endpoint error
     return nacl.sign.detached.verify(
         Buffer.from(timestamp + body),
         Buffer.from(signature, 'hex'),
